@@ -1,4 +1,10 @@
 package com.ribeiro.faketwitter.controller.dto;
 
-public record ErrorReponse() {
+import org.springframework.http.HttpStatus;
+
+public record ErrorResponse(
+        String message,
+        int code,
+        HttpStatus statusCode
+) {
 }
